@@ -1,134 +1,31 @@
 # Sovereign Helix Production Changelog
 
-**Geohash Signature:** `#AAC.11.11.1992`  
-**Domain:** TheSovereignHelix.com  
-**Repository:** CashflowNchill510/sovereign-helix-production  
+**Geohash:** `#AAC.11.11.1992`  
+**Domain:** thesovereignhelix.com  
+**Repository:** CashflowNchill510/sovereign-helix-production
 
----
+## v0.1.0 — Organized production cut
 
-## Version Tracking System
+**Date:** 2026-09-01  
+**Status:** Code ready to deploy. Domain DNS still required.
 
-Each version is tracked with:
-- **Date**: Release date (YYYY-MM-DD)
-- **Geohash Signature**: `#AAC.11.11.1992` (identity marker)
-- **NFT Hash**: Content hash for blockchain verification
-- **Git Tag**: Release tag in format `v{MAJOR}.{MINOR}.{PATCH}`
-- **Status**: Production/Staging/Archive
+### In this repo now
 
----
+- `worker.js` — APIs + `/health`
+- `public/index.html` — home
+- `public/pricing.html` — Engine-as-a-Service checkout
+- `public/studio.html` — idea studio
+- `wrangler.jsonc` — worker name `sovereign-helix`
+- GitHub Action deploy workflow
+- Deployment + domain checklist
 
-## v1.0.0 - Initial Production Release
-**Date**: 2026-09-01  
-**Geohash**: #AAC.11.11.1992  
-**NFT Hash**: `0x60f8f1d2eba8cf68a896d22e0fdeba41da84f545`  
-**Status**: ✅ Production Ready  
+### Honest status
 
-### Features
-- **Cognitive Mesh Panel**: Multi-model consensus engine
-- **Sacred Shield Upgrade**: Real-time mesh visualization
-- **Lattice Core**: Audio processing backend
-- **Remote Control Bridge**: App-tier integration
-- **Cloudflare Workers**: Edge deployment ready
+v1.0.0 was declared before the files existed. That label is retired until:
 
-### Files Included
-- `/src/components/CognitiveMeshPanel.tsx` - Main consensus engine
-- `/backend/lattice_audio_backend.py` - Audio processing
-- `/backend/grand_master_agent.py` - Orchestration
-- `/modules/autonomy/` - Autonomy engine
-- `/config/tsconfig.cloudflare.json` - Deployment config
+1. Worker deploys to `*.workers.dev`
+2. `thesovereignhelix.com` resolves
+3. Custom domain is attached
+4. `/health` returns ok on the apex
 
-### Breaking Changes
-- None (initial release)
-
-### Dependencies
-```json
-{
-  "react": "^18.0.0",
-  "framer-motion": "^10.0.0",
-  "typescript": "^5.0.0",
-  "cloudflare-workers": "latest"
-}
-```
-
----
-
-## Archive
-
-### Migration from The-Solveriegn-Helix
-- **Source Repo**: CashflowNchill510/The-Solveriegn-Helix
-- **Migration Date**: 2026-09-01
-- **Duplicates Removed**: 60+ files
-- **Production Files Selected**: 40+ core files
-- **Archive Location**: CashflowNchill510/helix-experiments-and-iterations
-
----
-
-## Future Releases
-
-### v1.1.0 (Planned)
-**Estimated**: Q3 2026
-- [ ] Enhanced consensus thresholds
-- [ ] Real-time divergence analytics
-- [ ] Cloudflare KV integration
-- [ ] WebSocket streaming
-
-### v2.0.0 (Roadmap)
-**Estimated**: Q4 2026
-- [ ] Multi-chain NFT verification
-- [ ] Advanced geohash routing
-- [ ] Distributed consensus scoring
-- [ ] Mobile companion app
-
----
-
-## File Integrity Tracking
-
-All production files are tracked with:
-- **Git SHA**: Blob hash for version control
-- **NFT Mint Date**: Date file was registered on blockchain
-- **Geohash Signature**: `#AAC.11.11.1992`
-- **Chain**: Ethereum mainnet (or specified network)
-
-**Verification Command**:
-```bash
-git log --oneline --all | grep "#AAC.11.11.1992"
-git show <commit-hash>:<file-path>
-```
-
----
-
-## How to Update This Changelog
-
-When releasing a new version:
-
-1. Add new version section at top (below current v1.0.0)
-2. Include date in format: `YYYY-MM-DD`
-3. Add geohash signature: `#AAC.11.11.1992`
-4. Generate NFT hash from file contents
-5. List all changes and new files
-6. Tag in git: `git tag -a v{VERSION} -m "Release: {DESCRIPTION}"`
-7. Push: `git push origin --tags`
-
----
-
-## Geohash Signature Reference
-
-**Geohash**: `#AAC.11.11.1992`
-- **A** = Alpha tier (production)
-- **A** = Authorized/Approved
-- **C** = Core module
-- **11.11.1992** = Identity timestamp (MM.DD.YYYY)
-
-This signature appears on all production releases, NFT mints, and blockchain transactions.
-
----
-
-## Questions?
-
-For production deployment or versioning queries:
-- Check `/docs/DEPLOYMENT.md`
-- Review `/docs/NFT-VERSIONING.md`
-- See git tags: `git tag -l`
-
-**Last Updated**: 2026-09-01 by GitHub Actions  
-**Next Review**: 2026-09-15
+NFT versioning remains phase 2. See `docs/NFT-VERSIONING.md`.

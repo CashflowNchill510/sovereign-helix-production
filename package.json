@@ -1,0 +1,14 @@
+{
+  "name": "sovereign-helix-production",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Production Worker + static surface for thesovereignhelix.com",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
